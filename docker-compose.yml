@@ -1,0 +1,7 @@
+version: '3'
+services:
+  cpp_exercises:
+    build: .
+    tty: true
+    volumes:
+      - .:/cpp_exercises
