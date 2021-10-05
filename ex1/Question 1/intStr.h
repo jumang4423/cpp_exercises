@@ -1,2 +1,2 @@
-char* intToStr(int);
-int strToInt(char*);
+char *intToStr(int);
+int strToInt(char *);
