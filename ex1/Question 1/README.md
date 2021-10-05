@@ -1,4 +1,4 @@
-# compile
+# compiling
 
 ```bash
 g++ intStr.cpp intStr_main.cpp && ./a.out
