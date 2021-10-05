@@ -1,11 +1,16 @@
 #include <iostream>
 #include "intStr.h"
 
+
+/**
+ * @brief testing environment
+ * 
+ * @return int 
+ */
 int main(void)
 {
 
     const int tests = 5;
-
     int test_datas[tests] = {1270174, 12345678, 32323232, -1234, 4423};
 
     for (int i = 0; i < tests; i++)

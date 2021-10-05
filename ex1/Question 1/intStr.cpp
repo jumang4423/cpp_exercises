@@ -1,6 +1,11 @@
 #include <stdlib.h>
-#include <stdio.h>
 
+/**
+ * @brief Get the Digit len
+ * 
+ * @param num 
+ * @return int 
+ */
 int getDigit(int num)
 {
     int digit = 0;
@@ -14,19 +19,33 @@ int getDigit(int num)
     return digit;
 }
 
+/**
+ * @brief Get the string Len
+ * 
+ * @param str 
+ * @return int 
+ */
 int getLen(char *str)
 {
     int len = 0;
+
     while (str[len] != '\0')
     {
         len++;
     }
+
     return len;
 }
 
+/**
+ * @brief put string minus 
+ * 
+ * @param str 
+ * @param len 
+ * @return char* 
+ */
 char *putMinus(char *str, int len)
 {
-
     char _buf = str[0];
     str[0] = '-';
 
@@ -40,9 +59,14 @@ char *putMinus(char *str, int len)
     return str;
 }
 
+/**
+ * @brief convert int to string
+ * 
+ * @param num 
+ * @return char* 
+ */
 char *intToStr(int num)
 {
-
     char *str;
     int _num = num < 0 ? -num : num;
     // make char space
@@ -66,6 +90,12 @@ char *intToStr(int num)
     return str;
 }
 
+/**
+ * @brief convert string to int
+ * 
+ * @param str 
+ * @return int 
+ */
 int strToInt(char *str)
 {
     int num = 0;
@@ -74,8 +104,8 @@ int strToInt(char *str)
 
     for (int i = 0; i < len; i++)
     {
-
-        if (str[len - i - 1] == '-') {
+        if (str[len - i - 1] == '-')
+        {
             num *= -1;
             continue;
         }
