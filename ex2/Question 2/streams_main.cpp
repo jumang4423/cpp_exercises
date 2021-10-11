@@ -65,11 +65,9 @@ int main(void)
     std::cout << "file_string_len: " << file_stack_len + 1 << std::endl;
     check_given_value_is_truly_same(file_stack_len + 1, file_len);
 
-        // check stack size
+    // check stack size
     std::cout << "max_string_len: " << max_string_len << std::endl;
     check_given_value_is_truly_same(max_string_len, 7);
-
-
 
     return 0;
 }

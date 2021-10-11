@@ -4,6 +4,15 @@
 #include <string>
 #include "../Question 1/Stack.h"
 
+void drawLine(int str_len)
+{
+    for (int i = 0; i < str_len; i++)
+    {
+        std::cout << "-";
+    }
+    std::cout << std::endl;
+}
+
 /**
  * @brief main function
  * 
@@ -43,11 +52,7 @@ int main(int argc, char *argv[])
 
     // print
 
-    for (int i = 0; i < max_string_len; i++)
-    {
-        std::cout << "-";
-    }
-    std::cout << std::endl;
+    drawLine(max_string_len);
 
     for (int i = 0; i < file_len; i++)
     {
@@ -56,11 +61,7 @@ int main(int argc, char *argv[])
         stack_data.pop();
     }
 
-    for (int i = 0; i < max_string_len; i++)
-    {
-        std::cout << "-";
-    }
-    std::cout << std::endl;
+    drawLine(max_string_len);
 
     return 0;
 }
