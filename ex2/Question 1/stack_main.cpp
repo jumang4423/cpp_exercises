@@ -10,14 +10,21 @@
  * @return true 
  * @return false 
  */
-template <typename T> bool check_given_value_is_truly_same(T expected, T test_value) {
-    if (expected == test_value) {
-        std::cout << "-o Test passed" << std::endl << std::endl;
-        return true;
-    } else {
-        std::cout << "-! Test failed" << std::endl << std::endl;
-        return false;
-    }
+template <typename T>
+bool check_given_value_is_truly_same(T expected, T test_value)
+{
+  if (expected == test_value)
+  {
+    std::cout << "-o Test passed" << std::endl
+              << std::endl;
+    return true;
+  }
+  else
+  {
+    std::cout << "-! Test failed" << std::endl
+              << std::endl;
+    return false;
+  }
 }
 
 /**
@@ -34,6 +41,10 @@ int main(void)
   std::cout << "check_is_emprty: " << check_is_empty << std::endl;
   check_given_value_is_truly_same(check_is_empty, true);
 
+  // check size
+  int check_current_size = stack_data.size();
+  std::cout << "check_current_size: " << check_current_size << std::endl;
+  check_given_value_is_truly_same(check_current_size, -1);
 
   // add 100 data to the stack_data
   for (int i = 0; i < 100; i++)
@@ -43,8 +54,12 @@ int main(void)
 
   // check the stack_data is full or not
   bool check_is_full = stack_data.full();
-  std::cout << "isfull: " << check_is_full << std::endl;
+  std::cout << "check_is_full: " << check_is_full << std::endl;
   check_given_value_is_truly_same(check_is_full, true);
+
+  check_current_size = stack_data.size();
+  std::cout << "check_current_size: " << check_current_size << std::endl;
+  check_given_value_is_truly_same(check_current_size, 99);
 
   // input all datas in the stack_data
   while (!stack_data.empty())
@@ -57,8 +72,13 @@ int main(void)
 
   // check the stack_data is empty or not again
   check_is_empty = stack_data.empty();
-  std::cout << "check_is_emprty: " << check_is_empty << std::endl;
+  std::cout << "check_is_empty: " << check_is_empty << std::endl;
   check_given_value_is_truly_same(check_is_empty, true);
+
+  // check size
+  check_current_size = stack_data.size();
+  std::cout << "check_current_size: " << check_current_size << std::endl;
+  check_given_value_is_truly_same(check_current_size, -1);
 
   return 0;
 }
