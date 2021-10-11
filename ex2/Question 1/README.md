@@ -8,10 +8,16 @@ g++-11 stack.cpp stack_main.cpp && ./a.out
 
 ```
 ❯ g++-11 stack.cpp stack_main.cpp && ./a.out
-check_is_emprty: 1
+check_is_empty: 1
 -o Test passed
 
-isfull: 1
+check_current_size: -1
+-o Test passed
+
+check_is_full: 1
+-o Test passed
+
+check_current_size: 99
 -o Test passed
 
 poped: data of index 99
@@ -115,6 +121,9 @@ poped: data of index 2
 poped: data of index 1
 poped: data of index 0
 
-check_is_emprty: 1
+check_is_empty: 1
+-o Test passed
+
+check_current_size: -1
 -o Test passed
 ```

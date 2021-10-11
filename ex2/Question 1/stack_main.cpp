@@ -38,7 +38,7 @@ int main(void)
 
   // check the stack_data is empty or not
   bool check_is_empty = stack_data.empty();
-  std::cout << "check_is_emprty: " << check_is_empty << std::endl;
+  std::cout << "check_is_empty: " << check_is_empty << std::endl;
   check_given_value_is_truly_same(check_is_empty, true);
 
   // check size
