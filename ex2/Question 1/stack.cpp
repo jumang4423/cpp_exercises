@@ -72,6 +72,11 @@ void Stack::test_print()
     std::cout << std::endl;
 }
 
+std::string Stack::top()
+{
+    return _data[_top];
+}
+
 /**
  * @brief print data by specified index
  * 
