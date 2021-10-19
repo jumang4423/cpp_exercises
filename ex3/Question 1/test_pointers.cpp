@@ -4,9 +4,9 @@ int main(void)
 {
   //
   // 1. declare a variable f as a pointer to a float
-  double *f;
+  float *f;
   // 2. create a float variable named pi, and store the value 3.14159f
-  double pi = 3.14159f;
+  float pi = 3.14159f;
   // 3. make f points to pi
   f = &pi;
   // 4. print out the content of the memory location pointed to by f
@@ -66,6 +66,8 @@ int main(void)
   {
     delete[] dd[i];
   }
+
+  delete[] dd; // delete the pointer to the array of pointers
 
   return 0;
 }
