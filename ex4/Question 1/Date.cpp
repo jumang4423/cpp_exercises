@@ -7,23 +7,23 @@ void Date::set(int m, int d, int y) {
     year = y;
 }
 
-void Date::print() {
+void Date::print() const {
     std::cout << "month: " << month << ", day: " << day << ", year: " << year << std::endl;
 }
 
-const int Date::get_month()
+int Date::get_month() const
 {
     const int const_month = month;
     return const_month;
 }
 
-const int Date::get_year()
+int Date::get_year() const
 {
     const int const_year = year;
     return const_year;
 }
 
-const int Date::get_day()
+int Date::get_day() const
 {
     const int const_day = day;
     return const_day;
