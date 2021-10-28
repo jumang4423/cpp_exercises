@@ -1,2 +1,7 @@
-void inc(double*);
-void inc(double&);
+#ifndef INC_H
+#define INC_H
+
+void inc(double *);
+void inc(double &);
+
+#endif
