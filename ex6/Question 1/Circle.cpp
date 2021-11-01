@@ -4,6 +4,7 @@
 #define PI_DEF 3.0
 #include <iostream>
 
+// Circle constructor
 Circle::Circle(Point2D left_corner, float radius): Shape2D("circle") {
     left_corner_.setX(left_corner.getX());
     left_corner_.setY(left_corner.getY());

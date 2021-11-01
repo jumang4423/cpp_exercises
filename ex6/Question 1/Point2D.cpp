@@ -10,11 +10,11 @@ Point2D::Point2D(float x, float y) {
     y_ = y;
 }
 
-float Point2D::getX() {
+float Point2D::getX() const {
     return x_;
 }
 
-float Point2D::getY() {
+float Point2D::getY() const {
     return y_;
 }
 
