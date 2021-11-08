@@ -13,9 +13,9 @@ public:
   Mat4x4(const Mat4x4 &m);
   Mat4x4(double a[4][4]);
   // =?
-  Mat4x4 &operator+=(const Mat4x4 &m);
-  Mat4x4 &operator-=(const Mat4x4 &m);
-  Mat4x4 &operator*=(const Mat4x4 &m);
+  Mat4x4 operator+=(const Mat4x4 &m);
+  Mat4x4 operator-=(const Mat4x4 &m);
+  Mat4x4 operator*=(const Mat4x4 &m);
   // ?
   Mat4x4 operator+(const Mat4x4 &m);
   Mat4x4 operator-(const Mat4x4 &m);

@@ -10,7 +10,14 @@ Mat4x4::Mat4x4()
   {
     for (int j = 0; j < 4; j++)
     {
-      m_[i][j] = 1.0;
+      if (i == j)
+      {
+        m_[i][j] = 1.0;
+      }
+      else
+      {
+        m_[i][j] = 0.0;
+      }
     }
   }
 }
@@ -40,7 +47,7 @@ Mat4x4::Mat4x4(double a[4][4])
 }
 
 // &operator+=(const Mat4x4 &m)
-Mat4x4 &Mat4x4::operator+=(const Mat4x4 &m)
+Mat4x4 Mat4x4::operator+=(const Mat4x4 &m)
 {
   for (int i = 0; i < 4; i++)
   {
@@ -53,7 +60,7 @@ Mat4x4 &Mat4x4::operator+=(const Mat4x4 &m)
 }
 
 // &operator-=(const Mat4x4 &m)
-Mat4x4 &Mat4x4::operator-=(const Mat4x4 &m)
+Mat4x4 Mat4x4::operator-=(const Mat4x4 &m)
 {
   for (int i = 0; i < 4; i++)
   {
@@ -66,13 +73,27 @@ Mat4x4 &Mat4x4::operator-=(const Mat4x4 &m)
 }
 
 // &operator*=(const Mat4x4 &m)
-Mat4x4 &Mat4x4::operator*=(const Mat4x4 &m)
+Mat4x4 Mat4x4::operator*=(const Mat4x4 &m)
 {
+  double mat_tmp[4][4];
   for (int i = 0; i < 4; i++)
   {
     for (int j = 0; j < 4; j++)
     {
-      m_[i][j] *= m.m_[i][j];
+      double res = 0.0;
+      for (int k = 0; k < 4; k++)
+      {
+        res += m_[i][k] * m.m_[k][j];
+      }
+      mat_tmp[i][j] = res;
+    }
+  }
+
+  for (int i = 0; i < 4; i++)
+  {
+    for (int j = 0; j < 4; j++)
+    {
+      m_[i][j] = mat_tmp[i][j];
     }
   }
   return *this;
