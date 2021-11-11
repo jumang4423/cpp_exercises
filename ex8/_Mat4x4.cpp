@@ -6,7 +6,7 @@
 // Constructors:: Mat4x4()
 Mat4x4::Mat4x4()
 {
-  for (int i = 0; i < 4; i++)
+  for (int i = 0; i < N; i++)
   {
     for (int j = 0; j < 4; j++)
     {
