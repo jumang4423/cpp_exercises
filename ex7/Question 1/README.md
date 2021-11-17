@@ -9,4 +9,3 @@
 libc++abi: terminating with uncaught exception of type std::invalid_argument: Invalid input
 fish: Job 1, './a.out' terminated by signal SIGABRT (Abort)
 ```
-g
