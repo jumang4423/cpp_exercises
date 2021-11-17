@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#include "evaluateFP.h"
+#include "evaluate.h"
 using namespace std;
 
 signed main(void)
@@ -14,7 +14,7 @@ signed main(void)
     {
       break;
     }
-    cout << "Output: " << evaluateFP(input) << endl;
+    cout << "Output: " << evaluate(input) << endl;
   }
 
   return 0;
