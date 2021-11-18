@@ -2,20 +2,20 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void showArray(vector<int> array)
+void showArray(forward_list<int> array)
 {
-  for (int i = 0; i < array.size(); i++)
-  {
-    cout << array[i] << " ";
+  for (const auto &i : array) {
+    cout << i << " ";
   }
+
   cout << endl;
+
 }
 
 signed main(void)
 {
-  
   // test array
-  vector<int> v = {423, 12, 999, 1, 4, 9, 73, 52, 44};
+  forward_list<int> v = {423, 12, 999, 1, 4, 9, 73, 52, 44};
   showArray(v);
   // sort
   PL4::sort(v.begin(), v.end());
