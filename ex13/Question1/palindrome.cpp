@@ -22,7 +22,7 @@ bool isPalindrome(string str)
     return false;
 }
 
-int main(void)
+signed main(void)
 {
   assert(isPalindrome("aa") == true);
   assert(isPalindrome("aba") == true);
